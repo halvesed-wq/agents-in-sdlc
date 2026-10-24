@@ -48,6 +48,8 @@ npm run dev
 
 The site runs at <http://localhost:4321/copilot-workshops/>.
 
+In a GitHub Codespace (or VS Code with the Dev Containers extension), the dev container in `.devcontainer/` installs the site dependencies for you, so you can go straight to `cd website && npm run dev`.
+
 ## Verification
 
 Before opening a PR, follow the [`build-and-verify-docs`](./.github/skills/build-and-verify-docs/SKILL.md) skill for type checks, a clean build, inspection of affected pages, and offline link checking. See [AUTHORING.md](./AUTHORING.md#building-and-verifying) for authoring context.
