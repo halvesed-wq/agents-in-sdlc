@@ -1,0 +1,26 @@
+// Dev container for previewing the workshop site (website/) in Codespaces or VS Code.
+// Format details: https://containers.dev/implementors/json_reference/
+{
+  "name": "Copilot Workshops (Node.js 22)",
+  // Astro 7 requires Node.js >= 22.22.0; CI uses the current LTS.
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22",
+
+  // Install site dependencies once the repository content is available.
+  "updateContentCommand": "cd website && npm ci",
+
+  "forwardPorts": [4321],
+  "portsAttributes": {
+    "4321": {
+      "label": "Workshop site",
+      "onAutoForward": "notify"
+    }
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "unifiedjs.vscode-mdx"
+      ]
+    }
+  }
+}
